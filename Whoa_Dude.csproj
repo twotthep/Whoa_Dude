@@ -305,6 +305,13 @@
     <Compile Include="Assets\Script\Player.cs" />
     <Compile Include="Assets\Script\PlayerController.cs" />
     <Compile Include="Assets\Script\Weapon.cs" />
+    <Compile Include="Assets\Unity-5-2D-Tile-Map-Editor-master\clipper_library\clipper.cs" />
+    <Compile Include="Assets\Unity-5-2D-Tile-Map-Editor-master\clipper_library\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\Unity-5-2D-Tile-Map-Editor-master\TileMapEditor\Script\Map.cs" />
+    <Compile Include="Assets\Unity-5-2D-Tile-Map-Editor-master\TileMapEditor\Script\PolygonConverter.cs" />
+    <Compile Include="Assets\Unity-5-2D-Tile-Map-Editor-master\TileMapEditor\Script\SnapToGrid.cs" />
+    <Compile Include="Assets\Unity-5-2D-Tile-Map-Editor-master\TileMapEditor\Script\TileBrush.cs" />
+    <Compile Include="Assets\Unity-5-2D-Tile-Map-Editor-master\TileMapEditor\Script\TileMap.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
