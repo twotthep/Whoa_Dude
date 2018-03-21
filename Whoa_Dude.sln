@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
+# Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whoa_Dude", "Whoa_Dude.csproj", "{2501C389-22DA-B547-4758-D32F698EF204}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whoa_Dude.Editor", "Whoa_Dude.Editor.csproj", "{564BA8AF-8944-A6F8-8E13-ADBFBF8FDB33}"

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
     public int health;
-    public string name;
+    //public string name;
     private bool player_state;
 
     //public Weapon weapon_type;
