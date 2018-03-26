@@ -1327,6 +1327,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 95370328954460578, guid: a2f839649288e1d49be7825cf4b197d1,
+        type: 2}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114974573560572354, guid: a2f839649288e1d49be7825cf4b197d1, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: a2f839649288e1d49be7825cf4b197d1, type: 2}
@@ -4370,6 +4375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 576fbca9ef019c54483292678012250f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxSpeed: 5
   chgTo: Stage6
 --- !u!4 &1767334459 stripped
 Transform:
