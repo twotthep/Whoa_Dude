@@ -14,12 +14,16 @@ public class PlayerController : MonoBehaviour {
     GameObject objToDestroy;
     bool canDestroy = false;
 
+    bool walkThroughDoor = false;
+    public GameObject triggered;
+
     Animator anim;
 	// Use this for initialization
 	void Start () {
         player = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         anim.SetInteger("walk", 0);
+        triggered.SetActive(false);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)   //Normal Collision 
@@ -49,7 +53,7 @@ public class PlayerController : MonoBehaviour {
             }
             else
             {
-
+                triggered.SetActive(true);
             }
         }
     }

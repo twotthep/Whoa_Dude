@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 212772141462727080}
   - component: {fileID: 95370328954460578}
   - component: {fileID: 50706377361983948}
-  - component: {fileID: 61093240562109028}
-  - component: {fileID: 114974573560572354}
+  - component: {fileID: 114302000867657148}
+  - component: {fileID: 70323227420685470}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -38,8 +38,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1704722156207766}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.013556, y: -10.820647, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -17.1, y: -7.8, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -64,8 +64,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &61093240562109028
-BoxCollider2D:
+--- !u!70 &70323227420685470
+CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -77,18 +77,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.16, y: 3.16}
-    newSize: {x: 29.760002, y: 39.680004}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
   m_Size: {x: 3.16, y: 3.16}
-  m_EdgeRadius: 0
+  m_Direction: 0
 --- !u!95 &95370328954460578
 Animator:
   serializedVersion: 3
@@ -106,7 +96,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114974573560572354
+--- !u!114 &114302000867657148
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -117,6 +107,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 576fbca9ef019c54483292678012250f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxSpeed: 5
+  chgTo: Stage2
+  numOfitemtoKeep: 0
 --- !u!212 &212772141462727080
 SpriteRenderer:
   m_ObjectHideFlags: 1
