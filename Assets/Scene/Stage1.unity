@@ -4140,8 +4140,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 5
-  chgTo: Stage2
+  chgTo: Level2
   numOfitemtoKeep: 0
+  triggered: {fileID: 0}
+  untriggered: {fileID: 0}
+  reveal: {fileID: 0}
 --- !u!1 &1869653487
 GameObject:
   m_ObjectHideFlags: 0

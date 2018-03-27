@@ -9,6 +9,7 @@ TagManager:
   - door
   - item
   - disable
+  - enable
   layers:
   - Default
   - TransparentFX

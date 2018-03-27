@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour {
     bool walkThroughDoor = false;
     public GameObject triggered;
     public GameObject untriggered;
+    public GameObject reveal;
 
     Animator anim;
 	// Use this for initialization
@@ -26,6 +27,7 @@ public class PlayerController : MonoBehaviour {
         anim.SetInteger("walk", 0);
         triggered.SetActive(false);
         untriggered.SetActive(true);
+        reveal.SetActive(true);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)   //Normal Collision 
@@ -61,7 +63,15 @@ public class PlayerController : MonoBehaviour {
         }
         if (collision.gameObject.tag == "disable")
         {
+            
             untriggered.SetActive(false);
+            triggered.SetActive(true);
+                Destroy(collision);
+        }
+        if(collision.gameObject.tag == "enable")
+        {
+            untriggered.SetActive(true);
+            reveal.SetActive(true);
         }
 
     }
