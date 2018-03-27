@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour {
     //private Sprite pSprite;
     public string chgTo;
 
+    public int numOfitemtoKeep = 0;
+
     GameObject objToDestroy;
     bool canDestroy = false;
 
@@ -22,11 +24,11 @@ public class PlayerController : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)   //Normal Collision 
     { 
-        if (collision.gameObject.tag == "door")
+        /*if (collision.gameObject.tag == "door")
         {
             Application.LoadLevel(chgTo);
             print("Collide");
-        }
+        }*/
     }
     private void OnTriggerEnter2D(Collider2D collision)     //Trigger Collision
     {
@@ -35,12 +37,28 @@ public class PlayerController : MonoBehaviour {
             print("Collide item");
             objToDestroy = collision.gameObject;
             canDestroy = true;
+            
         }
 
         if (collision.gameObject.tag == "door")
         {
-            Application.LoadLevel(chgTo);
-            print("Collide");
+            if (numOfitemtoKeep == 0)
+            {
+                Application.LoadLevel(chgTo);
+                print("Collide");
+            }
+            else
+            {
+
+            }
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag=="item")
+        {
+            print("Pass from item");
+            canDestroy = false;
         }
     }
 
@@ -75,6 +93,11 @@ public class PlayerController : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.E) && canDestroy)
         {
+            if (numOfitemtoKeep > 0)
+            {
+                numOfitemtoKeep -= 1;
+            }
+            print("Collected item");
             Destroy(objToDestroy);
         }
 
