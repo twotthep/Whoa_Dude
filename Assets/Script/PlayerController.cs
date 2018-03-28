@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour {
 
     GameObject objToDestroy;
     bool canDestroy = false;
+    bool canGetin = false;
 
     bool walkThroughDoor = false;
     public GameObject triggered;
@@ -58,8 +59,8 @@ public class PlayerController : MonoBehaviour {
             collidoor = true;
             if (numOfitemtoKeep == 0)
             {
-                Application.LoadLevel(chgTo);
-                print("Collide");
+                canGetin = true;
+                print("Door opened");
             }
             else
             {
@@ -140,6 +141,10 @@ public class PlayerController : MonoBehaviour {
             }
             print("Collected item");
             Destroy(objToDestroy);
+        }
+        if (Input.GetKeyDown(KeyCode.E) && canGetin)
+        {
+            Application.LoadLevel(chgTo);
         }
 
     }
