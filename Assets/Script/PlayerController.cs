@@ -22,10 +22,30 @@ public class PlayerController : MonoBehaviour {
 
     bool collidoor = false;
     public GameObject ghost;
+    public GameObject ghostCol;
+    public GameObject Bk_bg;
 
     Animator anim;
-	// Use this for initialization
-	void Start () {
+    float currCountdownValue;
+    //bool countEnd = false;
+    public IEnumerator StartCountdown(float countdownValue = 1)
+    {
+        currCountdownValue = countdownValue;
+        while (currCountdownValue >= 0)
+        {
+            Debug.Log("Countdown: " + currCountdownValue);
+            yield return new WaitForSeconds(1.0f);
+            currCountdownValue--;
+            if(currCountdownValue == 0)
+            {
+                Destroy(Bk_bg);
+            }
+            
+        }
+        
+    }
+    // Use this for initialization
+    void Start () {
         player = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         anim.SetInteger("walk", 0);
@@ -33,6 +53,8 @@ public class PlayerController : MonoBehaviour {
         untriggered.SetActive(true);
         reveal.SetActive(true);
         ghost.SetActive(false);
+        Bk_bg.SetActive(false);
+        ghostCol.SetActive(false);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)   //Normal Collision 
@@ -56,7 +78,8 @@ public class PlayerController : MonoBehaviour {
 
         if (collision.gameObject.tag == "door")
         {
-            collidoor = true;
+            
+            print("Collide with Door");
             if (numOfitemtoKeep == 0)
             {
                 canGetin = true;
@@ -72,17 +95,22 @@ public class PlayerController : MonoBehaviour {
             
             untriggered.SetActive(false);
             triggered.SetActive(true);
-                Destroy(collision);
+             Destroy(collision);
+            collidoor = true;
         }
         if(collision.gameObject.tag == "enable")
         {
+            if(canGetin == false)
+            {
+                ghost.SetActive(false);
+            }
             untriggered.SetActive(true);
             reveal.SetActive(true);
-            ghost.SetActive(false);
-            if(collidoor == true)
+            //collidoor = true;   
+            if (collidoor == true && canGetin == false)
             {
                 ghost.SetActive(true);
-
+                ghostCol.SetActive(true);
             }
             else
             {
@@ -91,13 +119,23 @@ public class PlayerController : MonoBehaviour {
         }
         if(collision.gameObject.tag == "away")
         {
+            print("Blackout");
             ghost.SetActive(false);
+            Bk_bg.SetActive(true);
+            StartCoroutine(StartCountdown());
+            
+            if(currCountdownValue == 0)
+            {
+                print("Count");
+                Bk_bg.SetActive(false);
+            }
+           
         }
 
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.gameObject.tag=="item")
+        if (collision.gameObject.tag == "item")
         {
             print("Pass from item");
             canDestroy = false;
