@@ -10,6 +10,7 @@ TagManager:
   - item
   - disable
   - enable
+  - away
   layers:
   - Default
   - TransparentFX

@@ -19,6 +19,9 @@ public class PlayerController : MonoBehaviour {
     public GameObject untriggered;
     public GameObject reveal;
 
+    bool collidoor = false;
+    public GameObject ghost;
+
     Animator anim;
 	// Use this for initialization
 	void Start () {
@@ -28,6 +31,7 @@ public class PlayerController : MonoBehaviour {
         triggered.SetActive(false);
         untriggered.SetActive(true);
         reveal.SetActive(true);
+        ghost.SetActive(false);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)   //Normal Collision 
@@ -51,6 +55,7 @@ public class PlayerController : MonoBehaviour {
 
         if (collision.gameObject.tag == "door")
         {
+            collidoor = true;
             if (numOfitemtoKeep == 0)
             {
                 Application.LoadLevel(chgTo);
@@ -72,6 +77,20 @@ public class PlayerController : MonoBehaviour {
         {
             untriggered.SetActive(true);
             reveal.SetActive(true);
+            ghost.SetActive(false);
+            if(collidoor == true)
+            {
+                ghost.SetActive(true);
+
+            }
+            else
+            {
+                ghost.SetActive(false);
+            }
+        }
+        if(collision.gameObject.tag == "away")
+        {
+            ghost.SetActive(false);
         }
 
     }
