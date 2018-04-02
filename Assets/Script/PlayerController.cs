@@ -85,17 +85,17 @@ public class PlayerController : MonoBehaviour {
             print("Collide with Door");
             if (numOfitemtoKeep == 0)
             {
-<<<<<<< HEAD
+
                 if(Input.GetKeyDown(KeyCode.E))
                 {
                     Application.LoadLevel(chgTo);
                     print("Collide");
                 }
                 
-=======
+
                 canGetin = true;
                 print("Door opened");
->>>>>>> f47ca772d002672826bf3a80edd92867b89a944e
+
             }
             else
             {
@@ -194,17 +194,11 @@ public class PlayerController : MonoBehaviour {
             print("Collected item");
             Destroy(objToDestroy);
         }
-<<<<<<< HEAD
-        /*if(Input.GetKeyDown(KeyCode.E) && )
-        {
 
-        }*/
-=======
         if (Input.GetKeyDown(KeyCode.E) && canGetin)
         {
             Application.LoadLevel(chgTo);
         }
->>>>>>> f47ca772d002672826bf3a80edd92867b89a944e
 
     }
     
