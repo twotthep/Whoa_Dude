@@ -22,6 +22,9 @@ public class PlayerController : MonoBehaviour {
     bool collidoor = false;
     public GameObject ghost;
 
+    public AudioSource doorLocked;
+    public AudioSource doorUnlocked;
+
     Animator anim;
 	// Use this for initialization
 	void Start () {
@@ -58,18 +61,24 @@ public class PlayerController : MonoBehaviour {
             collidoor = true;
             if (numOfitemtoKeep == 0)
             {
-                Application.LoadLevel(chgTo);
-                print("Collide");
+                if(Input.GetKeyDown(KeyCode.E))
+                {
+                    Application.LoadLevel(chgTo);
+                    print("Collide");
+                }
+                
             }
             else
             {
+                doorLocked.Play();
                 triggered.SetActive(true);
             }
         }
         if (collision.gameObject.tag == "disable")
         {
-            
-            untriggered.SetActive(false);
+
+            //  untriggered.SetActive(false);
+            doorLocked.Play();
             triggered.SetActive(true);
                 Destroy(collision);
         }
@@ -141,6 +150,10 @@ public class PlayerController : MonoBehaviour {
             print("Collected item");
             Destroy(objToDestroy);
         }
+        /*if(Input.GetKeyDown(KeyCode.E) && )
+        {
+
+        }*/
 
     }
     
