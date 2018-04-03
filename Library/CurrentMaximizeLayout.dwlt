@@ -20,10 +20,14 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 713, y: 492}
-  m_MaxSize: {x: 18008, y: 14042}
+  m_MinSize: {x: 709, y: 492}
+  m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
+<<<<<<< HEAD
   controlID: 139
+=======
+  controlID: 5010
+>>>>>>> parent of dc720c3... Merge branch 'master' of https://github.com/twotthep/Whoa_Dude
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -121,10 +125,14 @@ MonoBehaviour:
     y: 0
     width: 1372
     height: 947
-  m_MinSize: {x: 436, y: 492}
-  m_MaxSize: {x: 14006, y: 14042}
+  m_MinSize: {x: 432, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 117
+=======
+  controlID: 5011
+>>>>>>> parent of dc720c3... Merge branch 'master' of https://github.com/twotthep/Whoa_Dude
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -148,7 +156,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 13
+  controlID: 5012
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +173,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 202
+    width: 402
     height: 425
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
@@ -198,14 +206,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 92
-    width: 200
+    width: 400
     height: 404
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 4c280000
     m_LastClickedID: 0
     m_ExpandedIDs: eef4ffffeaf5ffff9efbffff00000000
+=======
+    scrollPos: {x: 0, y: 381}
+    m_SelectedIDs: fcecfeff
+    m_LastClickedID: -70404
+    m_ExpandedIDs: ce93ffff5aa7ffffd0bcffff1ec2ffffe0e3ffff00000000
+>>>>>>> parent of dc720c3... Merge branch 'master' of https://github.com/twotthep/Whoa_Dude
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -224,7 +239,11 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 5}
     m_SearchString: 
   m_ExpandedScenes:
+<<<<<<< HEAD
   - Stage1
+=======
+  - Stage6
+>>>>>>> parent of dc720c3... Merge branch 'master' of https://github.com/twotthep/Whoa_Dude
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -242,9 +261,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 202
+    x: 402
     y: 0
-    width: 1170
+    width: 970
     height: 425
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
@@ -277,20 +296,26 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
-    x: 204
+    x: 404
     y: 92
-    width: 1166
+    width: 966
     height: 404
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 331.93979861365153
+  lastFramingTime: 250.06839822222224
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: 59.245594, y: 8.038052, z: -1.4375}
     speed: 2
     m_Value: {x: 59.245594, y: 8.038052, z: -1.4375}
+=======
+    m_Target: {x: 50.34446, y: 5.0014143, z: -0.859375}
+    speed: 2
+    m_Value: {x: 50.34446, y: 5.0014143, z: -0.859375}
+>>>>>>> parent of dc720c3... Merge branch 'master' of https://github.com/twotthep/Whoa_Dude
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -318,9 +343,15 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+<<<<<<< HEAD
     m_Target: 96.42766
     speed: 2
     m_Value: 96.42766
+=======
+    m_Target: 115.714645
+    speed: 2
+    m_Value: 115.714645
+>>>>>>> parent of dc720c3... Merge branch 'master' of https://github.com/twotthep/Whoa_Dude
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -439,10 +470,14 @@ MonoBehaviour:
     y: 425
     width: 1372
     height: 522
-  m_MinSize: {x: 436, y: 271}
-  m_MaxSize: {x: 14006, y: 10021}
+  m_MinSize: {x: 432, y: 271}
+  m_MaxSize: {x: 14002, y: 10021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 118
+=======
+  controlID: 4989
+>>>>>>> parent of dc720c3... Merge branch 'master' of https://github.com/twotthep/Whoa_Dude
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -518,9 +553,15 @@ MonoBehaviour:
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: 4c290000
     m_LastClickedID: 10572
     m_ExpandedIDs: 00000000d02700002828000030280000522800008e280000c8280000222900009a2b00009c2b000000ca9a3bffffff7f
+=======
+    m_SelectedIDs: 882e0000
+    m_LastClickedID: 11912
+    m_ExpandedIDs: 000000009a2d0000ce2d0000da2d0000ea2d00000e2e0000362e0000da2e00008230000000ca9a3bffffff7f
+>>>>>>> parent of dc720c3... Merge branch 'master' of https://github.com/twotthep/Whoa_Dude
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -548,7 +589,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000d02700002828000030280000522800008e280000c8280000222900009a2b00009c2b0000
+=======
+    m_ExpandedIDs: 000000009a2d0000ce2d0000da2d0000ea2d00000e2e0000362e0000da2e00008230000000ca9a3bffffff7f
+>>>>>>> parent of dc720c3... Merge branch 'master' of https://github.com/twotthep/Whoa_Dude
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -573,10 +618,17 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
+<<<<<<< HEAD
     m_SelectedInstanceIDs: 4c280000
     m_LastClickedInstanceID: 10316
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000782a0000622e0000
+=======
+    m_SelectedInstanceIDs: fcecfeff
+    m_LastClickedInstanceID: -70404
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c6230000782a0000
+>>>>>>> parent of dc720c3... Merge branch 'master' of https://github.com/twotthep/Whoa_Dude
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -625,8 +677,8 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 228
-    y: 597
+    x: 0
+    y: 517
     width: 912
     height: 501
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -648,8 +700,8 @@ MonoBehaviour:
     y: 0
     width: 458
     height: 522
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 2}

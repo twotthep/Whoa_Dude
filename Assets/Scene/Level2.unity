@@ -1297,7 +1297,7 @@ Transform:
   m_LocalScale: {x: 1, y: 29.956545, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 47
+  m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &408657750
 GameObject:
@@ -2658,48 +2658,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1132224063
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4314883002815260, guid: 6895b33073794c14d81d9b1cebd198ea, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 44.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4314883002815260, guid: 6895b33073794c14d81d9b1cebd198ea, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -8.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4314883002815260, guid: 6895b33073794c14d81d9b1cebd198ea, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4314883002815260, guid: 6895b33073794c14d81d9b1cebd198ea, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4314883002815260, guid: 6895b33073794c14d81d9b1cebd198ea, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4314883002815260, guid: 6895b33073794c14d81d9b1cebd198ea, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4314883002815260, guid: 6895b33073794c14d81d9b1cebd198ea, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4314883002815260, guid: 6895b33073794c14d81d9b1cebd198ea, type: 2}
-      propertyPath: m_RootOrder
-      value: 46
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 6895b33073794c14d81d9b1cebd198ea, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1191576853
 GameObject:
   m_ObjectHideFlags: 0
@@ -4187,6 +4145,7 @@ MonoBehaviour:
   triggered: {fileID: 0}
   untriggered: {fileID: 0}
   reveal: {fileID: 0}
+<<<<<<< HEAD
   ghost: {fileID: 0}
   ghostCol: {fileID: 0}
   Bk_bg: {fileID: 0}
@@ -4272,6 +4231,8 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+=======
+>>>>>>> parent of dc720c3... Merge branch 'master' of https://github.com/twotthep/Whoa_Dude
 --- !u!1 &1869653487
 GameObject:
   m_ObjectHideFlags: 0
