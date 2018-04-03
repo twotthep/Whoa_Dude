@@ -25,6 +25,8 @@ public class PlayerController : MonoBehaviour {
     public AudioSource doorLocked;
     public AudioSource doorUnlocked;
 
+    bool canGetIn = false;
+
     Animator anim;
 	// Use this for initialization
 	void Start () {
@@ -61,23 +63,7 @@ public class PlayerController : MonoBehaviour {
             collidoor = true;
             if (numOfitemtoKeep == 0)
             {
-<<<<<<< HEAD
-
-=======
->>>>>>> parent of dc720c3... Merge branch 'master' of https://github.com/twotthep/Whoa_Dude
-                if(Input.GetKeyDown(KeyCode.E))
-                {
-                    Application.LoadLevel(chgTo);
-                    print("Collide");
-                }
-                
-<<<<<<< HEAD
-
-                canGetin = true;
-                print("Door opened");
-
-=======
->>>>>>> parent of dc720c3... Merge branch 'master' of https://github.com/twotthep/Whoa_Dude
+                canGetIn = true;
             }
             else
             {
@@ -88,16 +74,16 @@ public class PlayerController : MonoBehaviour {
         if (collision.gameObject.tag == "disable")
         {
 
-            //  untriggered.SetActive(false);
+            untriggered.SetActive(false);
             doorLocked.Play();
             triggered.SetActive(true);
-                Destroy(collision);
+            Destroy(collision);
         }
         if(collision.gameObject.tag == "enable")
         {
             untriggered.SetActive(true);
             reveal.SetActive(true);
-            ghost.SetActive(false);
+            //ghost.SetActive(false);
             if(collidoor == true)
             {
                 ghost.SetActive(true);
@@ -161,18 +147,11 @@ public class PlayerController : MonoBehaviour {
             print("Collected item");
             Destroy(objToDestroy);
         }
-<<<<<<< HEAD
-
-        if (Input.GetKeyDown(KeyCode.E) && canGetin)
+        if(Input.GetKeyDown(KeyCode.E) && canGetIn)
         {
             Application.LoadLevel(chgTo);
         }
-=======
-        /*if(Input.GetKeyDown(KeyCode.E) && )
-        {
 
-        }*/
->>>>>>> parent of dc720c3... Merge branch 'master' of https://github.com/twotthep/Whoa_Dude
 
     }
     
