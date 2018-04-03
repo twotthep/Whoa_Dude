@@ -919,7 +919,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1329,6 +1329,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114974573560572354, guid: a2f839649288e1d49be7825cf4b197d1, type: 2}
+    - {fileID: 114302000867657148, guid: a2f839649288e1d49be7825cf4b197d1, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: a2f839649288e1d49be7825cf4b197d1, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &554857952
@@ -4015,7 +4016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 576fbca9ef019c54483292678012250f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 5
+  maxSpeed: 10
   chgTo: Stage5
   numOfitemtoKeep: 0
   triggered: {fileID: 0}
@@ -4039,7 +4040,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
