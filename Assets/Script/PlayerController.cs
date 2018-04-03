@@ -25,6 +25,9 @@ public class PlayerController : MonoBehaviour {
     public GameObject ghostCol;
     public GameObject Bk_bg;
 
+    public AudioSource doorLocked;
+    public AudioSource doorUnlocked;
+
     Animator anim;
     float currCountdownValue;
     //bool countEnd = false;
@@ -82,18 +85,29 @@ public class PlayerController : MonoBehaviour {
             print("Collide with Door");
             if (numOfitemtoKeep == 0)
             {
+
+                if(Input.GetKeyDown(KeyCode.E))
+                {
+                    Application.LoadLevel(chgTo);
+                    print("Collide");
+                }
+                
+
                 canGetin = true;
                 print("Door opened");
+
             }
             else
             {
+                doorLocked.Play();
                 triggered.SetActive(true);
             }
         }
         if (collision.gameObject.tag == "disable")
         {
-            
-            untriggered.SetActive(false);
+
+            //  untriggered.SetActive(false);
+            doorLocked.Play();
             triggered.SetActive(true);
              Destroy(collision);
             collidoor = true;
@@ -180,6 +194,7 @@ public class PlayerController : MonoBehaviour {
             print("Collected item");
             Destroy(objToDestroy);
         }
+
         if (Input.GetKeyDown(KeyCode.E) && canGetin)
         {
             Application.LoadLevel(chgTo);
