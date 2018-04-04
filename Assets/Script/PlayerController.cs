@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour {
         blackBg.SetActive(false);
     }
     float currCountdownValue;
-    public IEnumerator StartCountdown(float countdownValue = 3)
+    public IEnumerator StartCountdown(float countdownValue = 1)
     {
         currCountdownValue = countdownValue;
         while (currCountdownValue > 0)
@@ -87,6 +87,7 @@ public class PlayerController : MonoBehaviour {
             {
                 doorLocked.Play();
                 triggered.SetActive(true);
+                untriggered.SetActive(false);
             }
         }
         if (collision.gameObject.tag == "disable")
@@ -117,6 +118,7 @@ public class PlayerController : MonoBehaviour {
         if(collision.gameObject.tag == "away")
         {
             ghost.SetActive(false);
+            Destroy(reveal);
             StartCoroutine(StartCountdown());
             numOfitemtoKeep -= 1;
         }
@@ -141,7 +143,7 @@ public class PlayerController : MonoBehaviour {
             // player.velocity += new Vector2(maxSpeed, 0.0f);
             player.transform.localRotation = Quaternion.Euler(0, 0, 0);
            // player.AddForce(Vector2.right * maxSpeed);
-           player.velocity = new Vector2(10.0f, 0.0f);
+           player.velocity = new Vector2(maxSpeed, 0.0f);
             
         }
         else if (Input.GetKey(KeyCode.A))                   //Go Left
@@ -150,11 +152,12 @@ public class PlayerController : MonoBehaviour {
             // player.velocity += new Vector2(-maxSpeed, 0.0f);
             player.transform.localRotation = Quaternion.Euler(0, 180, 0);
            // player.AddForce(Vector2.left * maxSpeed);
-            player.velocity = new Vector2(-10.0f, 0.0f);
+            player.velocity = new Vector2(-maxSpeed, 0.0f);
         }
         else if(Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
         {
             anim.SetInteger("walk", 0);
+            player.velocity = new Vector2(0.0f,0.0f);
         }
         else if (Input.GetKeyDown(KeyCode.W))                   //Jump
         {
@@ -168,6 +171,8 @@ public class PlayerController : MonoBehaviour {
             }
             print("Collected item");
             Destroy(objToDestroy);
+            untriggered.SetActive(true);
+
         }
         if(Input.GetKeyDown(KeyCode.E) && canGetIn)
         {
