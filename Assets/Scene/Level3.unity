@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 22185874}
   m_Layer: 0
   m_Name: Sign2 (1)
-  m_TagString: item
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1568,8 +1568,13 @@ Prefab:
     - target: {fileID: 114302000867657148, guid: a2f839649288e1d49be7825cf4b197d1,
         type: 2}
       propertyPath: maxSpeed
-      value: 8
+      value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 114302000867657148, guid: a2f839649288e1d49be7825cf4b197d1,
+        type: 2}
+      propertyPath: untriggered
+      value: 
+      objectReference: {fileID: 22185873}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2f839649288e1d49be7825cf4b197d1, type: 2}
   m_IsPrefabParent: 0
@@ -3151,6 +3156,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1328868423809544, guid: fbd412327d67953498b176f699afaf12, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fbd412327d67953498b176f699afaf12, type: 2}
   m_IsPrefabParent: 0
@@ -3775,7 +3784,7 @@ GameObject:
   - component: {fileID: 1580719942}
   - component: {fileID: 1580719944}
   m_Layer: 0
-  m_Name: Sign2
+  m_Name: Sign_White
   m_TagString: item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
