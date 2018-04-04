@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour {
 
     bool collidoor = false;
     public GameObject ghost;
+    public GameObject blackBg;
 
     public AudioSource doorLocked;
     public AudioSource doorUnlocked;
@@ -35,8 +36,25 @@ public class PlayerController : MonoBehaviour {
         anim.SetInteger("walk", 0);
         triggered.SetActive(false);
         untriggered.SetActive(true);
-        reveal.SetActive(true);
+        reveal.SetActive(false);
         ghost.SetActive(false);
+        blackBg.SetActive(false);
+    }
+    float currCountdownValue;
+    public IEnumerator StartCountdown(float countdownValue = 3)
+    {
+        currCountdownValue = countdownValue;
+        while (currCountdownValue > 0)
+        {
+            blackBg.SetActive(true);
+            Debug.Log("Countdown: " + currCountdownValue);
+            yield return new WaitForSeconds(1.0f);
+            currCountdownValue--;
+        }
+        if(currCountdownValue == 0)
+        {
+            blackBg.SetActive(false);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)   //Normal Collision 
@@ -78,16 +96,18 @@ public class PlayerController : MonoBehaviour {
             doorLocked.Play();
             triggered.SetActive(true);
             Destroy(collision);
+            collidoor = true;
+
         }
         if(collision.gameObject.tag == "enable")
         {
             untriggered.SetActive(true);
-            reveal.SetActive(true);
+            
             //ghost.SetActive(false);
             if(collidoor == true)
             {
                 ghost.SetActive(true);
-
+                reveal.SetActive(true);
             }
             else
             {
@@ -97,6 +117,8 @@ public class PlayerController : MonoBehaviour {
         if(collision.gameObject.tag == "away")
         {
             ghost.SetActive(false);
+            StartCoroutine(StartCountdown());
+            numOfitemtoKeep -= 1;
         }
 
     }
@@ -156,3 +178,4 @@ public class PlayerController : MonoBehaviour {
     }
     
 }
+     
