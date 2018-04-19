@@ -17,6 +17,8 @@ public class GameState : MonoBehaviour {
     public GameObject untriggered;
     public GameObject reveal;
 
+    public bool noItemLeft = false;
+
     bool collidoor = false;
 
     public AudioSource doorLocked;
@@ -44,6 +46,8 @@ public class GameState : MonoBehaviour {
     float currCountdownValue;
     public IEnumerator StartCountdown(float countdownValue = 2)
     {
+        Destroy(ghost);
+        Destroy(ghostShow);
         currCountdownValue = countdownValue;
         while (currCountdownValue > 0)
         {
@@ -55,7 +59,8 @@ public class GameState : MonoBehaviour {
         if (currCountdownValue == 0)
         {
             blackBg.SetActive(false);
-            Destroy(ghost);
+            
+            
         }
     } 
 
@@ -81,15 +86,27 @@ public class GameState : MonoBehaviour {
             }
             
             //Level Editor
+            if(level == "1" || level == "2")
+            {
+                canGetIn = true;
+            }
             if(level == "3")
             {
                 lv3_1obj.SetActive(true);
+            }
+            if(level == "3" && noItemLeft)
+            {
+                canGetIn = true;
             }
             if(level == "4")
             {
                 gotoLastDoorLv4 = true;
             }
-            if(level == "5")
+            if (level == "4" && noItemLeft)
+            {
+                canGetIn = true;
+            }
+            if (level == "5")
             {
                 canGetIn = true;
             }
@@ -98,6 +115,7 @@ public class GameState : MonoBehaviour {
                 gotoLastDoorLv6 = true;
             }
 
+            
 
 
         }
@@ -107,6 +125,7 @@ public class GameState : MonoBehaviour {
             if(level == "3")
             {
                 getItemLv3_1 = true;
+                noItemLeft = true;
             }
         }
         if(collider.gameObject.tag == "enable")
@@ -129,7 +148,7 @@ public class GameState : MonoBehaviour {
             {
                 StartCoroutine("StartCountdown", 2);
                 collideGhost = true;
-                canGetIn = true;
+                noItemLeft = true;
             }
         }
         if(collider.gameObject.tag == "Enemy")
@@ -200,11 +219,11 @@ void SetStart(string level)
     {
         if(level == "1")
         {
-            canGetIn = true;
+           canGetIn = false;
         }
         if(level == "2")
         {
-            canGetIn = true;
+            canGetIn = false;
         }
         if(level == "3")
         {
@@ -220,7 +239,7 @@ void SetStart(string level)
         }
         if(level == "5")
         {
-            
+            canGetIn = false;
         }
         if (level == "6")
         {

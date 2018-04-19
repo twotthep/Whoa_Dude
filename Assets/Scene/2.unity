@@ -1486,6 +1486,11 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: dea7d39b19a850d4b923b7656fec4a91, type: 3}
+    - target: {fileID: 82332052928783102, guid: a2f839649288e1d49be7825cf4b197d1,
+        type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114974573560572354, guid: a2f839649288e1d49be7825cf4b197d1, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: a2f839649288e1d49be7825cf4b197d1, type: 2}
@@ -4202,11 +4207,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 2
-  chgTo: 
   numOfitemtoKeep: 0
   triggered: {fileID: 0}
   untriggered: {fileID: 0}
   reveal: {fileID: 0}
+  noItemLeft: 0
   doorLocked: {fileID: 0}
   doorUnlocked: {fileID: 0}
   lv3_1obj: {fileID: 0}
@@ -4214,6 +4219,8 @@ MonoBehaviour:
   ghost: {fileID: 0}
   ghostShow: {fileID: 0}
   blackBg: {fileID: 0}
+  enemyLv6: {fileID: 0}
+  playerLv6: {fileID: 0}
 --- !u!1 &1869653487
 GameObject:
   m_ObjectHideFlags: 0

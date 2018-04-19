@@ -233,7 +233,13 @@ Prefab:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 82332052928783102, guid: a2f839649288e1d49be7825cf4b197d1,
+        type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 82332052928783102, guid: a2f839649288e1d49be7825cf4b197d1, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: a2f839649288e1d49be7825cf4b197d1, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &706971460
@@ -693,11 +699,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 5
-  chgTo: 5
   numOfitemtoKeep: 0
   triggered: {fileID: 0}
   untriggered: {fileID: 0}
   reveal: {fileID: 0}
+  noItemLeft: 0
   doorLocked: {fileID: 0}
   doorUnlocked: {fileID: 0}
   lv3_1obj: {fileID: 0}
@@ -705,3 +711,5 @@ MonoBehaviour:
   ghost: {fileID: 0}
   ghostShow: {fileID: 0}
   blackBg: {fileID: 0}
+  enemyLv6: {fileID: 0}
+  playerLv6: {fileID: 0}

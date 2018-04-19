@@ -1575,7 +1575,8 @@ Prefab:
       propertyPath: untriggered
       value: 
       objectReference: {fileID: 22185873}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 82332052928783102, guid: a2f839649288e1d49be7825cf4b197d1, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: a2f839649288e1d49be7825cf4b197d1, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &554857952
@@ -4440,11 +4441,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 3
-  chgTo: 4
   numOfitemtoKeep: 0
   triggered: {fileID: 0}
   untriggered: {fileID: 0}
   reveal: {fileID: 0}
+  noItemLeft: 0
   doorLocked: {fileID: 0}
   doorUnlocked: {fileID: 0}
   lv3_1obj: {fileID: 1580719941}
@@ -4452,6 +4453,8 @@ MonoBehaviour:
   ghost: {fileID: 0}
   ghostShow: {fileID: 0}
   blackBg: {fileID: 0}
+  enemyLv6: {fileID: 0}
+  playerLv6: {fileID: 0}
 --- !u!1 &1869653487
 GameObject:
   m_ObjectHideFlags: 0
