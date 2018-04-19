@@ -13,6 +13,7 @@ public class GameState : MonoBehaviour {
     bool canDestroy = false;
 
     bool walkThroughDoor = false;
+    //Global GameObject
     public GameObject triggered;
     public GameObject untriggered;
     public GameObject reveal;
@@ -23,6 +24,11 @@ public class GameState : MonoBehaviour {
 
     public AudioSource doorLocked;
     public AudioSource doorUnlocked;
+
+    //Level 3 GameObject
+    public GameObject lv3_1obj; //White Sign
+    public GameObject lv3_2obj; //Grey Sign
+    bool getItemLv3_1 = false;
 
     bool canGetIn = false;
 
@@ -41,7 +47,33 @@ public class GameState : MonoBehaviour {
         {
             if(canGetIn == true)
             {
-                
+                    
+            }
+            
+            //Level 3 Editor
+            if(level == "3")
+            {
+                lv3_1obj.SetActive(true);
+            }
+
+        }
+        if(collider.gameObject.tag == "item")
+        {
+            print("Collide item");
+            if(level == "3")
+            {
+                getItemLv3_1 = true;
+            }
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "item")
+        {
+            print("Out from item");
+            if (level == "3")
+            {
+                getItemLv3_1 = false;
             }
         }
     }
@@ -80,7 +112,16 @@ public class GameState : MonoBehaviour {
             {
                 Loadlevel("3");
             }
-    }
+            if (level == "3")
+            {
+                Loadlevel("4");
+            }
+        }
+        if(Input.GetKeyDown(KeyCode.E) && getItemLv3_1)
+        {
+            Destroy(lv3_1obj);
+            canGetIn = true;
+        }
    
 }
 
@@ -93,6 +134,11 @@ void SetStart(string level)
         if(level == "2")
         {
             canGetIn = true;
+        }
+        if(level == "3")
+        {
+            canGetIn = false;
+            lv3_1obj.SetActive(false);
         }
     }
     void Play()
