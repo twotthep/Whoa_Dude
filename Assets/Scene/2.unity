@@ -1476,6 +1476,16 @@ Prefab:
       propertyPath: maxSpeed
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 114302000867657148, guid: a2f839649288e1d49be7825cf4b197d1,
+        type: 2}
+      propertyPath: chgTo
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 82332052928783102, guid: a2f839649288e1d49be7825cf4b197d1,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: dea7d39b19a850d4b923b7656fec4a91, type: 3}
     m_RemovedComponents:
     - {fileID: 114974573560572354, guid: a2f839649288e1d49be7825cf4b197d1, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: a2f839649288e1d49be7825cf4b197d1, type: 2}
@@ -4138,6 +4148,27 @@ GameObject:
   m_PrefabParentObject: {fileID: 1704722156207766, guid: a2f839649288e1d49be7825cf4b197d1,
     type: 2}
   m_PrefabInternal: {fileID: 535722693}
+--- !u!114 &1767334458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1767334457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21d3ad570a9cc894eb02dcb7a65b98f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 2
+  chgTo: 
+  numOfitemtoKeep: 0
+  triggered: {fileID: 0}
+  untriggered: {fileID: 0}
+  reveal: {fileID: 0}
+  ghost: {fileID: 0}
+  blackBg: {fileID: 0}
+  doorLocked: {fileID: 0}
+  doorUnlocked: {fileID: 0}
 --- !u!1 &1869653487
 GameObject:
   m_ObjectHideFlags: 0

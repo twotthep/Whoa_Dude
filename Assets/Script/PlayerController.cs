@@ -34,11 +34,11 @@ public class PlayerController : MonoBehaviour {
         player = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         anim.SetInteger("walk", 0);
-        triggered.SetActive(false);
+        /*triggered.SetActive(false);
         untriggered.SetActive(true);
         reveal.SetActive(false);
         ghost.SetActive(false);
-        blackBg.SetActive(false);
+        blackBg.SetActive(false);*/
     }
     float currCountdownValue;
     public IEnumerator StartCountdown(float countdownValue = 1)
@@ -57,13 +57,13 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)   //Normal Collision 
+    /*private void OnCollisionEnter2D(Collision2D collision)   //Normal Collision 
     { 
-        /*if (collision.gameObject.tag == "door")
+        if (collision.gameObject.tag == "door")
         {
             Application.LoadLevel(chgTo);
             print("Collide");
-        }*/
+        }
        
     }
     private void OnTriggerEnter2D(Collider2D collision)     //Trigger Collision
@@ -132,7 +132,7 @@ public class PlayerController : MonoBehaviour {
             canDestroy = false;
         }
     }
-
+*/
     // Update is called once per frame
     private void Update()
     {
@@ -163,7 +163,7 @@ public class PlayerController : MonoBehaviour {
         {
             player.velocity += new Vector2(0.0f, 10.0f);
         }
-        if (Input.GetKeyDown(KeyCode.E) && canDestroy)
+        /*if (Input.GetKeyDown(KeyCode.E) && canDestroy)
         {
             if (numOfitemtoKeep > 0)
             {
@@ -178,7 +178,7 @@ public class PlayerController : MonoBehaviour {
         {
             Application.LoadLevel(chgTo);
         }
-
+        */
 
     }
     
