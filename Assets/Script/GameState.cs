@@ -5,7 +5,6 @@ using UnityEngine;
 public class GameState : MonoBehaviour {
     public string level;
     //public string nextLevel;
-    public string chgTo;
 
     public int numOfitemtoKeep = 0;
 
@@ -19,8 +18,6 @@ public class GameState : MonoBehaviour {
     public GameObject reveal;
 
     bool collidoor = false;
-    public GameObject ghost;
-    public GameObject blackBg;
 
     public AudioSource doorLocked;
     public AudioSource doorUnlocked;
@@ -30,6 +27,39 @@ public class GameState : MonoBehaviour {
     public GameObject lv3_2obj; //Grey Sign
     bool getItemLv3_1 = false;
 
+    //Level 4 GameObject
+    public GameObject ghost;
+    public GameObject ghostShow;
+    public GameObject blackBg;
+    bool collideGhost = false;
+    bool gotoLastDoorLv4 = false;
+
+
+    //Level 6 GameObject
+    public GameObject enemyLv6;
+    bool gotoLastDoorLv6 = false;
+    public GameObject playerLv6;
+
+        //CountDown thing
+    float currCountdownValue;
+    public IEnumerator StartCountdown(float countdownValue = 2)
+    {
+        currCountdownValue = countdownValue;
+        while (currCountdownValue > 0)
+        {
+            blackBg.SetActive(true);
+            Debug.Log("Countdown: " + currCountdownValue);
+            yield return new WaitForSeconds(1.0f);
+            currCountdownValue--;
+        }
+        if (currCountdownValue == 0)
+        {
+            blackBg.SetActive(false);
+            Destroy(ghost);
+        }
+    } 
+
+    //Global bool for door unlocked
     bool canGetIn = false;
 
     Animator anim;
@@ -50,11 +80,25 @@ public class GameState : MonoBehaviour {
                     
             }
             
-            //Level 3 Editor
+            //Level Editor
             if(level == "3")
             {
                 lv3_1obj.SetActive(true);
             }
+            if(level == "4")
+            {
+                gotoLastDoorLv4 = true;
+            }
+            if(level == "5")
+            {
+                canGetIn = true;
+            }
+            if(level == "6")
+            {
+                gotoLastDoorLv6 = true;
+            }
+
+
 
         }
         if(collider.gameObject.tag == "item")
@@ -64,6 +108,34 @@ public class GameState : MonoBehaviour {
             {
                 getItemLv3_1 = true;
             }
+        }
+        if(collider.gameObject.tag == "enable")
+        {
+            if(level == "4" && gotoLastDoorLv4)
+            {
+                ghost.SetActive(true);
+                ghostShow.SetActive(true);
+            }
+            if(level == "6" && gotoLastDoorLv6)
+            {
+                enemyLv6.SetActive(true);
+                
+            }
+        }
+        if(collider.gameObject.tag == "away")
+        {
+            print("Collide Away");
+            if(level == "4")
+            {
+                StartCoroutine("StartCountdown", 2);
+                collideGhost = true;
+                canGetIn = true;
+            }
+        }
+        if(collider.gameObject.tag == "Enemy")
+        {
+            playerLv6.transform.Rotate(new Vector3(0, 0, 129));
+            playerLv6.transform.Translate(new Vector3(0, 5, 0));
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -88,15 +160,6 @@ public class GameState : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         SetStart(level);
-       // player.GetComponent<Collider2D>();
-     /*   player = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
-        anim.SetInteger("walk", 0);
-        triggered.SetActive(false);
-        untriggered.SetActive(true);
-        reveal.SetActive(false);
-        ghost.SetActive(false);
-        blackBg.SetActive(false);*/
     }
 	
 	// Update is called once per frame
@@ -115,6 +178,14 @@ public class GameState : MonoBehaviour {
             if (level == "3")
             {
                 Loadlevel("4");
+            }
+            if (level == "4")
+            {
+                Loadlevel("5");
+            }
+            if(level == "5")
+            {
+                Loadlevel("6");
             }
         }
         if(Input.GetKeyDown(KeyCode.E) && getItemLv3_1)
@@ -139,6 +210,21 @@ void SetStart(string level)
         {
             canGetIn = false;
             lv3_1obj.SetActive(false);
+        }
+        if(level == "4")
+        {
+            canGetIn = false;
+            ghost.SetActive(false);
+            ghostShow.SetActive(false);
+            blackBg.SetActive(false);
+        }
+        if(level == "5")
+        {
+            
+        }
+        if (level == "6")
+        {
+            enemyLv6.SetActive(false);
         }
     }
     void Play()
