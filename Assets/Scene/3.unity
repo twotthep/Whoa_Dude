@@ -4428,6 +4428,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1767334459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1767334457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21d3ad570a9cc894eb02dcb7a65b98f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 3
+  chgTo: 4
+  numOfitemtoKeep: 0
+  triggered: {fileID: 0}
+  untriggered: {fileID: 0}
+  reveal: {fileID: 0}
+  ghost: {fileID: 0}
+  blackBg: {fileID: 0}
+  doorLocked: {fileID: 0}
+  doorUnlocked: {fileID: 0}
+  lv3_1obj: {fileID: 1580719941}
+  lv3_2obj: {fileID: 22185873}
 --- !u!1 &1869653487
 GameObject:
   m_ObjectHideFlags: 0
