@@ -3,42 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour {
-    public int health;
-    public string name;
-
-    public Transform Player;
-    public int moveSpeed = 5;
-    public int maxDist = 10;
-    public int minDist = 5;
-
-    int GetHealth()         //return Enemy's Health
-    {
-        return health;
-    }
-    void SetHealth(int hp)  //increase or decrease Enemy's health
-    {
-        health += hp;
-    }
+ 
+    public Transform target; //Please drag Player GameObject to this in  Unity's Inspector.
+    private int moveSpeed = 2;
+    private Vector3 offset; //offset between Player and Camera
+    
 	// Use this for initialization
 	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        transform.LookAt(Player);
+       
+    }
+    void LateUpdate()
+    {
+        
+    }
 
-        if (Vector3.Distance(transform.position, Player.position) >= minDist)
-        {
-
-            transform.position += transform.forward * moveSpeed * Time.deltaTime;
-
-
-
-            if (Vector3.Distance(transform.position, Player.position) <= maxDist)
-            {
-                //Here Call any function U want Like Shoot at here or something
-            }
-        }
-        }
+    // Update is called once per frame
+    void Update()
+    {
+        Vector3 targetDirection = target.position - transform.position;
+        transform.position += targetDirection * moveSpeed * Time.deltaTime;
+    }
 }

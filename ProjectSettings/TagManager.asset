@@ -8,6 +8,9 @@ TagManager:
   - Enemy
   - door
   - item
+  - disable
+  - enable
+  - away
   layers:
   - Default
   - TransparentFX

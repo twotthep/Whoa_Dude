@@ -6,26 +6,23 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scene/gameover.unity
-    guid: ffde863be9dd6bc4b9c6d37623883696
-  - enabled: 1
-    path: Assets/Scene/Main.unity
-    guid: f0e5c4e61ae607743a0477381ba7a62b
-  - enabled: 1
-    path: Assets/Scene/Stage1.unity
+    path: Assets/Scene/1.unity
     guid: 5030b390292a4a741be68809d84b50ea
   - enabled: 1
-    path: Assets/Scene/Stage2.unity
-    guid: bb8fbe83e1e0eca409a287d7614f6c49
+    path: Assets/Scene/2.unity
+    guid: 3baa88c3c8c872441b5b71af748f4e93
   - enabled: 1
-    path: Assets/Scene/Stage3.unity
-    guid: 57b738c90364343478831d475e741537
+    path: Assets/Scene/3.unity
+    guid: d8bbe08e0b856fb41a67586b93ee7682
   - enabled: 1
-    path: Assets/Scene/Stage4.unity
-    guid: 48a23f4ab8d4b62418a5c90844d6a0bd
+    path: Assets/Scene/4.unity
+    guid: 867c85f3986c33240a0241d1cc931890
   - enabled: 1
-    path: Assets/Scene/Stage5.unity
-    guid: 8029a5b6ff618c442afc8e26685b0ce4
+    path: Assets/Scene/5.unity
+    guid: d59ff15a891f7d74e9e7dac1c16581e7
   - enabled: 1
-    path: Assets/Scene/Stage6.unity
-    guid: 32996febd610a274f960fe2fbe96539a
+    path: Assets/Scene/6.unity
+    guid: a4408691cdd2e614d8da3ac0e780af8e
+  - enabled: 1
+    path: Assets/Scene/gameover.unity
+    guid: ffde863be9dd6bc4b9c6d37623883696
