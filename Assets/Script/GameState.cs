@@ -49,6 +49,11 @@ public class GameState : MonoBehaviour {
     //Level 9 GameObject
     public GameObject enemyLv9;
 
+    //Level 15 GameObject
+    public SpriteRenderer bkLightlv15;
+    public GameObject ghostLv15;
+    public GameObject ghostLv15_2;
+
         //CountDown thing
     float currCountdownValue;
     public IEnumerator StartCountdown(float countdownValue = 2)
@@ -98,6 +103,30 @@ public class GameState : MonoBehaviour {
         }
     }
 
+    
+    IEnumerator DoBlinks(float duration, float blinkTime)
+    {
+        while (duration > 0f)
+        {
+            duration -= Time.deltaTime;
+
+            //toggle renderer
+            bkLightlv15.enabled = !bkLightlv15.enabled;
+
+            //wait for a bit
+            yield return new WaitForSeconds(blinkTime);
+           
+        }
+       /* if(duration == 0f)
+        {
+            Destroy(bkLightlv15);
+        }*/
+        //make sure renderer is enabled when we exit
+       
+       bkLightlv15.enabled = true;
+        
+
+    }
     //Global bool for door unlocked
     bool canGetIn = false;
 
@@ -164,6 +193,26 @@ public class GameState : MonoBehaviour {
             {
                 canGetIn = true;
             }
+            if(level == "11")
+            {
+                canGetIn = true;
+            }
+            if(level == "12")
+            {
+                canGetIn = true;
+            }
+            if(level == "13")
+            {
+                canGetIn = true;
+            }
+            if (level == "14")
+            {
+                canGetIn = true;
+            }
+            if (level == "15")
+            {
+                canGetIn = true;
+            }
 
         }
         if(collider.gameObject.tag == "item")
@@ -182,6 +231,11 @@ public class GameState : MonoBehaviour {
             if(level == "9")
             {
                 StartCoroutine(StartCountdownLv9());
+            }
+            if(level == "15")
+            {
+                StartCoroutine(DoBlinks(5.0f,0.125f));
+              
             }
             
         }
@@ -207,12 +261,32 @@ public class GameState : MonoBehaviour {
                 collideGhost = true;
                 noItemLeft = true;
             }
+            if(level == "15")
+            {
+                Destroy(bkLightlv15);
+            }
         }
         if(collider.gameObject.tag == "Enemy")
         {
-            playerLv6.transform.Rotate(new Vector3(0, 0, 129));
-            playerLv6.transform.Translate(new Vector3(0, 5, 0));
-            StartCoroutine(StartCountdownLv6());
+            if(level == "6")
+            {
+                playerLv6.transform.Rotate(new Vector3(0, 0, 129));
+                playerLv6.transform.Translate(new Vector3(0, 5, 0));
+                StartCoroutine(StartCountdownLv6());
+            }
+            if(level == "15")
+            {
+                Destroy(collider);
+            }
+            
+        }
+        if(collider.gameObject.tag == "disappear")
+        {
+            if(level == "15")
+            {
+                ghostLv15.SetActive(true);
+                ghostLv15_2.SetActive(false);
+            }
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -280,6 +354,26 @@ public class GameState : MonoBehaviour {
             {
                 Loadlevel("11");
             }
+            if(level == "11")
+            {
+                Loadlevel("12");
+            }
+            if(level == "12")
+            {
+                Loadlevel("13");
+            }
+            if(level == "13")
+            {
+                Loadlevel("14");
+            }
+            if (level == "14")
+            {
+                Loadlevel("15");
+            }
+            if (level == "15")
+            {
+                Loadlevel("gameover");
+            }
         }
         if(Input.GetKeyDown(KeyCode.E) && getItemLv3_1)
         {
@@ -340,6 +434,28 @@ void SetStart(string level)
         if(level == "10")
         {
             canGetIn = false;
+        }
+        if(level == "11")
+        {
+            canGetIn = false;
+        }
+        if(level == "12")
+        {
+            canGetIn = false;
+        }
+        if(level == "13")
+        {
+            canGetIn = false;
+        }
+        if (level == "14")
+        {
+            canGetIn = false;
+        }
+        if (level == "15")
+        {
+            canGetIn = false;
+            bkLightlv15.enabled = !bkLightlv15.enabled;
+            ghostLv15.SetActive(false);
         }
     }
     void Play()
