@@ -7,9 +7,13 @@ public class Enemy : MonoBehaviour {
     public Transform target; //Please drag Player GameObject to this in  Unity's Inspector.
     private int moveSpeed = 2;
     private Vector3 offset; //offset between Player and Camera
-    
-	// Use this for initialization
-	void Start () {
+
+    public float moveSpeedmodifier = .0125f;
+
+    public GameObject enemy;
+
+    // Use this for initialization
+    void Start () {
        
     }
     void LateUpdate()
@@ -21,6 +25,8 @@ public class Enemy : MonoBehaviour {
     void Update()
     {
         Vector3 targetDirection = target.position - transform.position;
-        transform.position += targetDirection * moveSpeed * Time.deltaTime;
+        transform.position += targetDirection * moveSpeed * Time.deltaTime * moveSpeedmodifier;
+       
+        
     }
 }
