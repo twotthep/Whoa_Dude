@@ -40,10 +40,10 @@ public class PlayerController : MonoBehaviour {
             anim.SetInteger("walk", 0);
             player.velocity = new Vector2(0.0f,0.0f);
         }
-        else if (Input.GetKeyDown(KeyCode.W))                   //Jump
+        /*else if (Input.GetKeyDown(KeyCode.W))                   //Jump
         {
             player.velocity += new Vector2(0.0f, 10.0f);
-        }
+        }*/
        
 
     }

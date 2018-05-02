@@ -12,6 +12,7 @@ TagManager:
   - enable
   - away
   - disappear
+  - bed
   layers:
   - Default
   - TransparentFX

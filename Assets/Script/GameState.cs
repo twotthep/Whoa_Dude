@@ -303,6 +303,7 @@ public class GameState : MonoBehaviour {
                 ghostLv15_2.SetActive(false);
             }
         }
+       
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
