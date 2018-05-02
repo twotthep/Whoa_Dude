@@ -361,6 +361,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1767334464}
+  moveSpeedmodifier: 0.5
+  enemy: {fileID: 0}
 --- !u!1001 &706971460
 Prefab:
   m_ObjectHideFlags: 0
@@ -831,6 +833,7 @@ MonoBehaviour:
   triggered: {fileID: 0}
   untriggered: {fileID: 0}
   reveal: {fileID: 0}
+  noItemLeft: 0
   doorLocked: {fileID: 0}
   doorUnlocked: {fileID: 0}
   lv3_1obj: {fileID: 0}
@@ -840,3 +843,8 @@ MonoBehaviour:
   blackBg: {fileID: 0}
   enemyLv6: {fileID: 680734374}
   playerLv6: {fileID: 1767334457}
+  idCardLv8: {fileID: 0}
+  enemyLv9: {fileID: 0}
+  bkLightlv15: {fileID: 0}
+  ghostLv15: {fileID: 0}
+  ghostLv15_2: {fileID: 0}
