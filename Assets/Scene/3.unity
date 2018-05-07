@@ -1515,7 +1515,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4134851797161980, guid: a2f839649288e1d49be7825cf4b197d1, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -17.1
+      value: -14.45
       objectReference: {fileID: 0}
     - target: {fileID: 4134851797161980, guid: a2f839649288e1d49be7825cf4b197d1, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1575,8 +1575,25 @@ Prefab:
       propertyPath: untriggered
       value: 
       objectReference: {fileID: 22185873}
+    - target: {fileID: 114914245363698694, guid: a2f839649288e1d49be7825cf4b197d1,
+        type: 2}
+      propertyPath: level
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114914245363698694, guid: a2f839649288e1d49be7825cf4b197d1,
+        type: 2}
+      propertyPath: lv3_1obj
+      value: 
+      objectReference: {fileID: 1580719941}
+    - target: {fileID: 114914245363698694, guid: a2f839649288e1d49be7825cf4b197d1,
+        type: 2}
+      propertyPath: lv3_2obj
+      value: 
+      objectReference: {fileID: 22185873}
     m_RemovedComponents:
     - {fileID: 82332052928783102, guid: a2f839649288e1d49be7825cf4b197d1, type: 2}
+    - {fileID: 114314449737699962, guid: a2f839649288e1d49be7825cf4b197d1, type: 2}
+    - {fileID: 114914245363698694, guid: a2f839649288e1d49be7825cf4b197d1, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: a2f839649288e1d49be7825cf4b197d1, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &554857952
@@ -4455,6 +4472,11 @@ MonoBehaviour:
   blackBg: {fileID: 0}
   enemyLv6: {fileID: 0}
   playerLv6: {fileID: 0}
+  idCardLv8: {fileID: 0}
+  enemyLv9: {fileID: 0}
+  bkLightlv15: {fileID: 0}
+  ghostLv15: {fileID: 0}
+  ghostLv15_2: {fileID: 0}
 --- !u!1 &1869653487
 GameObject:
   m_ObjectHideFlags: 0

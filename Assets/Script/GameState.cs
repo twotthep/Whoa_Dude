@@ -127,6 +127,21 @@ public class GameState : MonoBehaviour {
         
 
     }
+
+    public IEnumerator StartCountdownLv7(float countdownValue = 2)
+    {
+        while (currCountdownValue > 0)
+        {
+            Time.timeScale = 0;
+            Debug.Log("Countdown: " + currCountdownValue);
+            yield return new WaitForSeconds(1.0f);
+            currCountdownValue--;
+        }
+        if (currCountdownValue == 0)
+        {
+            Time.timeScale = 1;
+        }
+    }
     //Global bool for door unlocked
     bool canGetIn = false;
 
@@ -288,6 +303,7 @@ public class GameState : MonoBehaviour {
                 ghostLv15_2.SetActive(false);
             }
         }
+       
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -385,7 +401,6 @@ public class GameState : MonoBehaviour {
             Destroy(idCardLv8);
             canGetIn = true;
         }
-
     }
 
 void SetStart(string level)
@@ -412,14 +427,17 @@ void SetStart(string level)
         }
         if(level == "5")
         {
+            
             canGetIn = false;
         }
         if (level == "6")
         {
+
             enemyLv6.SetActive(false);
         }
         if(level == "7")
         {
+           // Time.timeScale = 0;
             canGetIn = false;
         }
         if(level == "8")
