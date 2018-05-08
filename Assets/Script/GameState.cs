@@ -16,6 +16,7 @@ public class GameState : MonoBehaviour {
     public GameObject triggered;
     public GameObject untriggered;
     public GameObject reveal;
+    ScreenFader fadeScr;
 
     public bool noItemLeft = false;
 
@@ -147,12 +148,9 @@ public class GameState : MonoBehaviour {
 
     Animator anim;
 
-    void Main()
+    private void Awake()
     {
-        if (level == "1")
-        {
-            
-        }
+        fadeScr = GameObject.FindObjectOfType<ScreenFader>();
     }
     private void OnTriggerEnter2D(Collider2D collider)
     {
@@ -336,7 +334,8 @@ public class GameState : MonoBehaviour {
             
             if (level == "1")
             {
-                Loadlevel("2");
+           // fadeScr.EndScene(1);
+            Loadlevel("2");
             }
             if (level == "2")
             {
