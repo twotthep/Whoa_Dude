@@ -999,7 +999,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.12, y: 5.12}
+    oldSize: {x: 6.06, y: 8.03}
     newSize: {x: 5.12, y: 5.12}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1495,6 +1495,7 @@ Prefab:
     - {fileID: 114974573560572354, guid: a2f839649288e1d49be7825cf4b197d1, type: 2}
     - {fileID: 114314449737699962, guid: a2f839649288e1d49be7825cf4b197d1, type: 2}
     - {fileID: 114914245363698694, guid: a2f839649288e1d49be7825cf4b197d1, type: 2}
+    - {fileID: 114615552140643354, guid: a2f839649288e1d49be7825cf4b197d1, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: a2f839649288e1d49be7825cf4b197d1, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &552695675
@@ -2930,11 +2931,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4790507024372376, guid: fbd412327d67953498b176f699afaf12, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 142.46
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 4790507024372376, guid: fbd412327d67953498b176f699afaf12, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -7.1232457
+      value: -2.6
       objectReference: {fileID: 0}
     - target: {fileID: 4790507024372376, guid: fbd412327d67953498b176f699afaf12, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2971,6 +2972,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fbd412327d67953498b176f699afaf12, type: 2}
   m_IsPrefabParent: 0
+--- !u!95 &1224520767 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95598532443368826, guid: fbd412327d67953498b176f699afaf12,
+    type: 2}
+  m_PrefabInternal: {fileID: 1224520766}
 --- !u!1 &1239075673
 GameObject:
   m_ObjectHideFlags: 0
@@ -3251,11 +3257,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4790507024372376, guid: fbd412327d67953498b176f699afaf12, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -21.64
+      value: -20.5
       objectReference: {fileID: 0}
     - target: {fileID: 4790507024372376, guid: fbd412327d67953498b176f699afaf12, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -7.11
+      value: -2.9
       objectReference: {fileID: 0}
     - target: {fileID: 4790507024372376, guid: fbd412327d67953498b176f699afaf12, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3285,7 +3291,12 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1328868423809544, guid: fbd412327d67953498b176f699afaf12, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95598532443368826, guid: fbd412327d67953498b176f699afaf12, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: fbd412327d67953498b176f699afaf12, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1361483064 stripped
@@ -3517,7 +3528,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -4487,6 +4498,7 @@ MonoBehaviour:
   noItemLeft: 0
   doorLocked: {fileID: 0}
   doorUnlocked: {fileID: 0}
+  door_anim: {fileID: 1224520767}
   lv3_1obj: {fileID: 0}
   lv3_2obj: {fileID: 0}
   ghost: {fileID: 0}

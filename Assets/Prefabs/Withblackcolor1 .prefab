@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212674026178879808}
   - component: {fileID: 60167095290333028}
   - component: {fileID: 95910406299163878}
+  - component: {fileID: 114793240073412460}
   m_Layer: 0
   m_Name: 'Withblackcolor1 '
   m_TagString: Untagged
@@ -36,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1869979157397520}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 90.4, y: -7.97, z: 0}
-  m_LocalScale: {x: -0.8044339, y: 0.4596768, z: 0.39971882}
+  m_LocalPosition: {x: 16.6, y: -7.5, z: 0}
+  m_LocalScale: {x: 0.7458264, y: 0.47561845, z: 0.31421185}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -258,6 +259,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114793240073412460
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1869979157397520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07913c88d71e85646bc48276ff7ea8d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  moveSpeedmodifier: 0.04
+  enemy: {fileID: 1869979157397520}
 --- !u!212 &212674026178879808
 SpriteRenderer:
   m_ObjectHideFlags: 1

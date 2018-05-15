@@ -238,10 +238,16 @@ Prefab:
       propertyPath: Loop
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114615552140643354, guid: a2f839649288e1d49be7825cf4b197d1,
+        type: 2}
+      propertyPath: door_anim
+      value: 
+      objectReference: {fileID: 1224520767}
     m_RemovedComponents:
     - {fileID: 82332052928783102, guid: a2f839649288e1d49be7825cf4b197d1, type: 2}
     - {fileID: 114314449737699962, guid: a2f839649288e1d49be7825cf4b197d1, type: 2}
     - {fileID: 114914245363698694, guid: a2f839649288e1d49be7825cf4b197d1, type: 2}
+    - {fileID: 114615552140643354, guid: a2f839649288e1d49be7825cf4b197d1, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: a2f839649288e1d49be7825cf4b197d1, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &706971460
@@ -387,11 +393,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4968971677049544, guid: f41f3442af5fb4445b9b84054de215d5, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 142.46
+      value: 143.2
       objectReference: {fileID: 0}
     - target: {fileID: 4968971677049544, guid: f41f3442af5fb4445b9b84054de215d5, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -7.1232457
+      value: -3.6
       objectReference: {fileID: 0}
     - target: {fileID: 4968971677049544, guid: f41f3442af5fb4445b9b84054de215d5, type: 2}
       propertyPath: m_LocalPosition.z
@@ -417,9 +423,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4968971677049544, guid: f41f3442af5fb4445b9b84054de215d5, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2.163058
+      objectReference: {fileID: 0}
+    - target: {fileID: 4968971677049544, guid: f41f3442af5fb4445b9b84054de215d5, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2.163058
+      objectReference: {fileID: 0}
+    - target: {fileID: 4968971677049544, guid: f41f3442af5fb4445b9b84054de215d5, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 2.163058
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f41f3442af5fb4445b9b84054de215d5, type: 2}
   m_IsPrefabParent: 0
+--- !u!95 &1224520767 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95125732341515534, guid: f41f3442af5fb4445b9b84054de215d5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1224520766}
 --- !u!1001 &1309511137
 Prefab:
   m_ObjectHideFlags: 0
@@ -429,11 +452,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4469416741289256, guid: d91f93d26754b9b469dbe31b3a30b227, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -21.64
+      value: -22.9
       objectReference: {fileID: 0}
     - target: {fileID: 4469416741289256, guid: d91f93d26754b9b469dbe31b3a30b227, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -7.11
+      value: -2.9
       objectReference: {fileID: 0}
     - target: {fileID: 4469416741289256, guid: d91f93d26754b9b469dbe31b3a30b227, type: 2}
       propertyPath: m_LocalPosition.z
@@ -458,6 +481,18 @@ Prefab:
     - target: {fileID: 4469416741289256, guid: d91f93d26754b9b469dbe31b3a30b227, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469416741289256, guid: d91f93d26754b9b469dbe31b3a30b227, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2.3831348
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469416741289256, guid: d91f93d26754b9b469dbe31b3a30b227, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2.383135
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469416741289256, guid: d91f93d26754b9b469dbe31b3a30b227, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 2.383135
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d91f93d26754b9b469dbe31b3a30b227, type: 2}
@@ -708,6 +743,7 @@ MonoBehaviour:
   noItemLeft: 0
   doorLocked: {fileID: 0}
   doorUnlocked: {fileID: 0}
+  door_anim: {fileID: 1224520767}
   lv3_1obj: {fileID: 0}
   lv3_2obj: {fileID: 0}
   ghost: {fileID: 0}

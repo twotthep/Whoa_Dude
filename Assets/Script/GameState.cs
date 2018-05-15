@@ -25,6 +25,8 @@ public class GameState : MonoBehaviour {
     public AudioSource doorLocked;
     public AudioSource doorUnlocked;
 
+    public Animator door_anim;
+
     //Level 3 GameObject
     public GameObject lv3_1obj; //White Sign
     public GameObject lv3_2obj; //Grey Sign
@@ -158,21 +160,24 @@ public class GameState : MonoBehaviour {
         {
             if(canGetIn == true)
             {
-                    
+                
             }
             
             //Level Editor
             if(level == "1" || level == "2")
             {
                 canGetIn = true;
+                door_anim.SetBool("door_event", true);
             }
             if(level == "3")
             {
                 lv3_1obj.SetActive(true);
+                canGetIn = false;
             }
             if(level == "3" && noItemLeft)
             {
                 canGetIn = true;
+                door_anim.SetBool("door_event", true);
             }
             if(level == "4")
             {
@@ -181,10 +186,12 @@ public class GameState : MonoBehaviour {
             if (level == "4" && noItemLeft)
             {
                 canGetIn = true;
+                door_anim.SetBool("door_event", true);
             }
             if (level == "5")
             {
                 canGetIn = true;
+                door_anim.SetBool("door_event", true);
             }
             if(level == "6")
             {
@@ -193,38 +200,47 @@ public class GameState : MonoBehaviour {
             if(level == "7")
             {
                 canGetIn = true;
+                door_anim.SetBool("door_event", true);
             }
             if(level == "8")
             {
                 idCardLv8.SetActive(true);
+                door_anim.SetBool("door_event", true);
             }
             if (level == "9")
             {
                 canGetIn = true;
+                door_anim.SetBool("door_event", true);
             }
             if(level == "10")
             {
                 canGetIn = true;
+                door_anim.SetBool("door_event", true);
             }
             if(level == "11")
             {
                 canGetIn = true;
+                door_anim.SetBool("door_event", true);
             }
             if(level == "12")
             {
                 canGetIn = true;
+                door_anim.SetBool("door_event", true);
             }
             if(level == "13")
             {
                 canGetIn = true;
+                door_anim.SetBool("door_event", true);
             }
             if (level == "14")
             {
                 canGetIn = true;
+                door_anim.SetBool("door_event", true);
             }
             if (level == "15")
             {
                 canGetIn = true;
+                door_anim.SetBool("door_event", true);
             }
 
         }
@@ -235,6 +251,7 @@ public class GameState : MonoBehaviour {
             {
                 getItemLv3_1 = true;
                 noItemLeft = true;
+
             }
             if(level == "8")
             {
@@ -325,6 +342,8 @@ public class GameState : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         SetStart(level);
+        door_anim.GetComponents<Animator>();
+        door_anim.SetBool("door_event", false);
     }
 	
 	// Update is called once per frame
@@ -394,11 +413,13 @@ public class GameState : MonoBehaviour {
         {
             Destroy(lv3_1obj);
             canGetIn = true;
+            door_anim.SetBool("door_event", true);
         }
         if (Input.GetKeyDown(KeyCode.E) && getidCardLv8)
         {
             Destroy(idCardLv8);
             canGetIn = true;
+            door_anim.SetBool("door_event", true);
         }
     }
 
@@ -415,6 +436,7 @@ void SetStart(string level)
         if(level == "3")
         {
             canGetIn = false;
+            door_anim.SetBool("door_event", false);
             lv3_1obj.SetActive(false);
         }
         if(level == "4")
